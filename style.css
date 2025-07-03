@@ -1,0 +1,434 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* --------- HEADER / MENÚ --------- */
+header.Inicio {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10x;
+  background-color: #2E70CE;
+  height: 60px;
+}
+
+nav {
+  flex-grow: 1;
+  overflow-x: auto;
+}
+
+nav ul {
+  display: flex;
+  gap: 5rem;
+  list-style: none;
+  justify-content: center;
+  padding-left: 0;
+  margin: 0;
+  min-width: max-content;
+}
+
+.menu-inicio ul li a {
+  color: white;
+  text-decoration: none;
+  font-family: "Noto Sans", sans-serif;
+  white-space: nowrap;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.inicio-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.logo {
+  width: 50px;
+  height: auto;
+  flex-shrink: 0;
+}
+
+/* --------- PORTADA INICIO / TRÁMITES --------- */
+.portada-inicio,
+.portada-tramites {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  gap: 20px;
+}
+
+.portada-texto,
+.tramites-texto {
+  flex: 1 1 300px;
+  min-width: 280px;
+}
+
+.portada-texto h1 {
+  color: #0056b3;
+  font-family: "Noto Sans", sans-serif;
+}
+
+.portada-texto h2 {
+  color: #1D2366;
+  font-family: "Noto Sans", sans-serif;
+}
+
+.portada-imagen,
+.tramite-imagen {
+  flex: 1 1 300px;
+  display: flex;
+  justify-content: flex-end;
+  min-width: 280px;
+}
+
+.medico,
+.imagen-tramite {
+  max-width: 800px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: 0;
+}
+
+/* --------- LISTAS DE TRÁMITES Y BAJAS (GRID) --------- */
+.lista-tramite,
+.tramite-baja {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.tramite,
+.baja {
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  padding: 15px;
+  text-align: center;
+}
+
+.tramite img,
+.tramite-baja img {
+  max-width: 100px;
+  height: auto;
+  margin: 10px 0;
+}
+
+.tramite-inicio {
+  text-align: center;
+}
+.tramite-inicio h3 {
+  color: #1D2366;
+  font-family: "Noto Sans", sans-serif;
+}
+
+/* --------- SECCIONES CON TEXTO E IMAGEN --------- */
+section {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.seccion {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 20px 0;
+  gap: 20px;
+}
+
+.seccion.invertido {
+  flex-direction: row-reverse;
+}
+
+.texto {
+  flex: 1 1 300px;
+  padding: 10px;
+  color: #1D2366;
+  font-family: "Noto Sans", sans-serif;
+}
+
+.texto ul {
+  padding-left: 15px;
+}
+
+.texto ul li {
+  margin-bottom: 8px;
+}
+
+.imagen {
+  flex: 1 1 300px;
+  max-width: 400px;
+  width: 100%;
+  height: auto;
+  padding: 20px;
+}
+
+.cartilla {
+  text-align: center;
+  padding: 100px;
+}
+
+/* --------- BOTONES --------- */
+button,
+.footer-left a {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  text-decoration: none;
+  display: inline-block;
+  font-family: "Noto Sans", sans-serif;
+}
+
+button a {
+  color: white;
+  text-decoration: none;
+}
+
+.footer-left a:hover {
+  background-color: #0056b3;
+}
+
+.tramite-boton {
+  text-align: center;
+}
+/* --------- FOOTER --------- */
+footer {
+  position: relative;
+  background-color: #2E70CE;
+  background-image: url('./img/footerfondo.png');
+  background-size: 600px;
+  background-repeat: repeat;
+  background-position: center;
+  background-blend-mode: multiply;
+  color: white;
+  padding: 40px 20px;
+  text-align: left;
+  overflow: hidden;
+  font-family: "Noto Sans", sans-serif;
+}
+
+footer::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: rgba(46, 112, 206, 0);
+  z-index: 0;
+}
+
+footer > * {
+  position: relative;
+  z-index: 1;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 20px;
+}
+
+.footer-left,
+.footer-right {
+  flex: 1 1 300px;
+}
+
+.footer-left a {
+  color: white;
+  background-color: #007BFF;
+  padding: 8px 16px;
+  border-radius: 4px;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 10px;
+}
+
+.footer-left a:hover {
+  background-color: #0056b3;
+}
+
+footer a,
+footer p,
+footer h4,
+footer span,
+footer li {
+  color: white;
+}
+
+.map-container iframe {
+  width: 100%;
+  height: 200px;
+  border: none;
+}
+
+/* --------- TIPOGRAFÍA GENERAL --------- */
+h1, h2, h3, h4, p, summary {
+  font-family: "Noto Sans", sans-serif;
+}
+
+h1 {
+  color: #2E70CE;
+  font-size: 60px;
+}
+
+h2 {
+  color: #1D2366;
+  font-weight: 300;
+  font-size: 4rem;
+}
+
+h3 {
+  color: #1D2366;
+}
+
+h4 {
+  color: #2E70CE;
+}
+
+p {
+  color: #3D79B5;
+}
+
+p.telefonos {
+  color: white;
+  font-size: 15px;
+}
+
+/* --------- FAQ --------- */
+.pregunta-tramite {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 100px 20px;
+}
+
+.pregunta-tramite details {
+  padding: 10px 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #E9EFF9;
+}
+
+/* --------- RESPONSIVE --------- */
+@media (max-width: 992px) {
+  nav ul {
+    gap: 3rem;
+  }
+  
+  h1 {
+    font-size: 48px;
+  }
+  
+  h2 {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+    header.Inicio {
+    padding: 0 10px;
+  }
+  
+  .logo {
+    width: 40px;
+  }
+  
+  nav ul {
+    gap: 1.5rem;
+    justify-content: flex-start;
+  }
+
+  .inicio-flex {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .portada-inicio,
+  .portada-tramites {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .portada-imagen,
+  .tramite-imagen {
+    justify-content: center;
+  }
+
+  .seccion {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-left a {
+    width: 100%;
+    padding: 12px 0;
+  }
+
+  .map-container iframe {
+    height: 250px;
+  }
+}
+
+@media (max-width: 576px) {
+  h1 {
+    font-size: 36px;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  .pregunta-tramite {
+    padding: 50px 15px;
+  }
+
+  button,
+  .footer-left a {
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+
+  .map-container iframe {
+    height: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  header.Inicio {
+    flex-direction: column;
+    height: auto;
+    padding: 10px 10px;
+  }
+  
+  nav {
+    width: 100%;
+    overflow-x: visible;
+    margin-top: 10px;
+  }
+  
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    min-width: 0;
+  }
+  
+  .menu-inicio ul li a {
+    font-size: 1.1rem;
+  }
+}
