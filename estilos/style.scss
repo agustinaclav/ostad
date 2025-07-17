@@ -399,7 +399,7 @@ p.telefonos {
 }
 
 .disca-tramite {
-    max-width: 100px;
+    max-width: 600px;
     height: auto;
     margin: 10px 0;
 }
@@ -598,116 +598,129 @@ input[type="reset"] {
 
 
 /* --------- RESPONSIVE --------- */
-@media (max-width: 992px) {
-  nav ul {
-    gap: 3rem;
+/* === Animaciones con CSS === */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
   }
-  
-  h1 {
-    font-size: 48px;
-  }
-  
-  h2 {
-    font-size: 3rem;
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
-@media (max-width: 768px) {
-    header.Inicio {
-    padding: 0 10px;
-  }
-  
-  .logo {
-    width: 40px;
-  }
-  
-  nav ul {
-    gap: 1.5rem;
-    justify-content: flex-start;
+.fade-in {
+  opacity: 0;
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1s ease forwards;
+  animation-delay: 0.2s;
+}
+
+/* === Estilos Generales === */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: white;
+  color: #222;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+section {
+  padding: 2rem 1rem;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* === Planes === */
+.plan {
+  background-color: #e1efff;
+  border: 2px solid #2e70ce;
+  border-radius: 15px;
+  padding: 1rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  transition: transform 0.3s ease;
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+.plan:hover {
+  transform: translateY(-5px);
+}
+
+.plan li {
+  list-style-type: disc;
+  text-align: left;
+  margin-left: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.plan button {
+  background-color: #2e70ce;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.plan button:hover {
+  background-color: #1f4fa3;
+}
+
+/* === Secciones extras animadas === */
+.atencion-virtual, .oficinas, .superintendencia {
+  background-color: #e1efff;
+  border: 2px solid #2e70ce;
+  border-radius: 15px;
+  padding: 1rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  animation: fadeInUp 1s ease forwards;
+}
+
+/* === Responsive === */
+@media (min-width: 768px) {
+  .planes-container {
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
   }
 
-  .inicio-flex {
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
-  }
-
-  .portada-inicio,
-  .portada-tramites {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .portada-imagen,
-  .tramite-imagen {
-    justify-content: center;
-  }
-
-  .seccion {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .footer-container {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .footer-left a {
-    width: 100%;
-    padding: 12px 0;
-  }
-
-  .map-container iframe {
-    height: 250px;
+  .plan {
+    flex: 1;
   }
 }
 
-@media (max-width: 576px) {
-  h1 {
-    font-size: 36px;
-  }
-
-  h2 {
-    font-size: 2rem;
-  }
-
-  .pregunta-tramite {
-    padding: 50px 15px;
-  }
-
-  button,
-  .footer-left a {
-    padding: 10px;
-    font-size: 0.9rem;
-  }
-
-  .map-container iframe {
-    height: 200px;
+@media (max-width: 767px) {
+  .plan {
+    margin-bottom: 1.5rem;
   }
 }
 
-@media (max-width: 480px) {
-  header.Inicio {
-    flex-direction: column;
-    height: auto;
-    padding: 10px 10px;
-  }
-  
-  nav {
-    width: 100%;
-    overflow-x: visible;
-    margin-top: 10px;
-  }
-  
-  nav ul {
-    flex-direction: column;
-    gap: 10px;
-    justify-content: center;
-    min-width: 0;
-  }
-  
-  .menu-inicio ul li a {
-    font-size: 1.1rem;
-  }
+/* === Contenedor general si se necesita === */
+.planes-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.disca-tramite {
+  max-width: 600px;
+  width: 100%;
+  height: auto;
+  margin: 10px auto;
+  box-sizing: border-box;
+  padding: 1rem;
 }
