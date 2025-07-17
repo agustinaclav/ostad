@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="/estilos/style.css">
     <title>OSTAD - Obra Social Talleristas a Domicilio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -29,27 +29,36 @@
 </header>
     <!--menu navegacion principal-->
     <main>
+      <div class="seccion-contacto">
+        <img src="../img/portada-contacto.png" alt="contacto" class="imagen-contacto">
+      </div>
+        <div class="titulo-contacto">
+          <h1>Contacto</h1>
+          <p>Nuestras vias de comunicacion para ascesorarte</p>
+      </div>
 
-        <img src="../img/portada-contacto.png" alt="contacto">
-        <h1>Contacto</h1>
-        <p>Nuestas vias de comunicacion para ascesorarte</p>
-
-        <h3>Atencion virtual</h3>
-        <p>112186-9646</p>
-        <p>adm.ostad@gmail.com</p>
-        <p>4854-3506/4708</p>
-
-        <h3>Nuestras oficinas</h3>
-        <p>Acevedo 553, Villa Crespo</p>
-
-        <h3>Superintendencia de Servicios de Salud</h3>
-        <p>4344-2800</p>
-        <p>0800-222-72583</p>
-        <p>Av. Pte Roque Saenz Peña 530</p>
-        <p>www.argentina.gob.ar/sssalud</p>
-
-        <h3>Formulario de Contacto</h2>
-
+      <div class="lista-contacto">
+        <div class="atencion-virtual">
+          <h3>Atencion virtual</h3>
+          <p>112186-9646</p>
+          <p>adm.ostad@gmail.com</p>
+          <p>4854-3506/4708</p>
+        </div>
+        <div class="oficinas">
+          <h3>Nuestras oficinas</h3>
+          <p>Acevedo 553, Villa Crespo</p>
+        </div>
+        <div class="superintendencia">
+          <h3>Superintendencia de Servicios de Salud</h3>
+          <p>4344-2800</p>
+          <p>0800-222-72583</p>
+          <p>Av. Pte Roque Saenz Peña 530</p>
+          <p>www.argentina.gob.ar/sssalud</p> 
+        </div>
+      </div>
+      <div class="formulario-titulo">
+        <h2>Formulario de Contacto</h2>
+      </div>
     <form action="mailto:ostad@gmail.com" method="post" enctype="text/plain">
         <label>Nombre:
         <input type="text" name="nombre" required>
@@ -83,7 +92,7 @@
     <h4>Superintendencia de Servicios de Salud</h4>
     <p>Av Pdte. Roque Saenz Peña 530 - Ciudad Autónoma de Buenos Aires</p>
     <p>0800-222-72583 (SALUD)</p>
-    <button><a href="#">Sitio web</a></button>
+    <a href="#" class="button">Sitio web</a>
   </div>
 
   <div class="footer-right">

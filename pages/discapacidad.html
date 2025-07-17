@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="/estilos/style.css">
     <title>OSTAD - Obra Social Talleristas a Domicilio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -29,16 +29,22 @@
 </header>
     <!--menu navegacion principal-->
     <main>
-        <section>
-        <img src="../img/portada-discapacidad.png" alt="discapacidad">    
-        <h1>Discapacidad</h1>
-        <p>Te contamos como es el tramite para acceder a prestaciones por discapacidad.</p>
+        <section class="portada-discapacidad">
+          <div class="discapacidad-texto">
+            <h1>Discapacidad</h1>  
+            <p>Te contamos como es el tramite para acceder a prestaciones por discapacidad.</p>
+          </div>
+          <div class="discapacidad-imagen">
+            <img src="../img/portada-discapacidad.png" alt="discapacidad">    
+          </div>
         </section>
 
         <section>
-
+          <div class="titulo-discapacidad">
             <h2>Documentacion a presentar</h2>
-
+          </div>
+          <div class="documentacion">
+          <div class="recuadro-gral">
             <h3>Documentacion general</h3>
             <ul>Fotocopia del DNI del socio</ul>
             <ul>Certificado de discapacidad</ul>
@@ -46,7 +52,9 @@
             <ul>Indicacion medica para cada prestacion</ul>
             <ul>Fotocopia de la credencial</ul>
             <ul>Formulario de actualizacion de datos personales</ul>
+          </div>
 
+          <div class="recuadro-prestador">
             <h3>Prestador</h3>
             <ul>Prespuesto</ul>
             <ul>Informe inicial o final del año anterior</ul>
@@ -54,42 +62,61 @@
             <ul>Seguro</ul>
             <ul>Plan de tratamiento</ul>
             <ul>Datos bancarios, CBU</ul>
-
+          </div>
+          <div class="recuadro-transporte">
             <h3>Transporte</h3>
             <ul>Presupuesto</ul>
             <ul>Recorrido en google maps</ul>
             <ul>Datos del conductor y seguro`</ul>
+          </div>  
+            </div>
         </section>
 
         <section>
+          <div class="que-hacer">
+            <div class="texto-dis">
             <h2>Que hacer cuando juntes la documentacion</h2>
             <p>Una vez que reuniste todos los papeles, te pedimos que te pongas en contacto con nosotros a nuestro whatsapp o lineas telefonicas para ascesorarte de la mejor forma y agilizar el tramite.</p>
+           </div> 
+            <img src="../img/traspaso-tramite.png" alt="disca-tramite" class="disca-tramite">
+          </div> 
+          </section>
+
+        <section>
+          <div class="contacto-discapacidad">
+
+              <div class="preguntas">
+
+                <h2>Preguntas frecuentes</h2>
+                <details>
+                  <summary>De que forma se pagan las prestaciones</summary>
+                  <p>Todas las prestaciones de discapacidad se abonan a traves del sistema de Integracion establecido por la Superintendencia de Servicios de Salud. Los plazos de demora son de 60 dias.</p>
+                </details>
+                <details>
+                  <summary>Tengo que renovar las prestaciones todos los años</summary>
+                  <p>Las autorizaciones se realizan por año calendario, por lo cual todos los años se tiene que volver a presentar la documentacion para su autorizacion.</p>
+                </details>
+                <details>
+                  <summary>Donde puedo encontrar los profesionales</summary>
+                  <p>Cada padre tiene libertad para elegir profesionales para su hijo, siempre y cuando, cumpla con los requisitos que establece la Superintendencia de Servicios de Salud.</p>
+                </details>
+              </div>
+          </div>
+            
+
         </section>
 
         <section>
-
-            <h2>Preguntas frecuentes</h2>
-            <details>
-<summary>De que forma se pagan las prestaciones</summary>
-  <p>Todas las prestaciones de discapacidad se abonan a traves del sistema de Integracion establecido por la Superintendencia de Servicios de Salud. Los plazos de demora son de 60 dias.</p>
-</details>
-<details>
-    <summary>Tengo que renovar las prestaciones todos los años</summary>
-    <p>Las autorizaciones se realizan por año calendario, por lo cual todos los años se tiene que volver a presentar la documentacion para su autorizacion.</p>
-</details>
-<details>
-    <summary>Donde puedo encontrar los profesionales</summary>
-    <p>Cada padre tiene libertad para elegir profesionales para su hijo, siempre y cuando, cumpla con los requisitos que establece la Superintendencia de Servicios de Salud.</p>
-</details>
-
-        </section>
-
-        <section>
+          <div class="foto-formulario">
             <img src="../img/descarga.png" alt="descarga">
+          </div>
+          <div class="texto-formulario"> 
             <h2>Formularios utiles</h2>
             <p>Te dejamos los formularios necesarios para completar la documentacion solicitada</p>
-            <a href="https://drive.google.com/drive/folders/1VG5ScR7G14ShCpm-Gi1-TaMmKNNLWJdJ">Descarga</a>
+            <a href="https://drive.google.com/drive/folders/1VG5ScR7G14ShCpm-Gi1-TaMmKNNLWJdJ" class="button">Descarga</a>
+          </div>
         </section>
+      </div>
     </main>
 
     <footer class="footer-container">
@@ -97,7 +124,7 @@
     <h4>Superintendencia de Servicios de Salud</h4>
     <p>Av Pdte. Roque Saenz Peña 530 - Ciudad Autónoma de Buenos Aires</p>
     <p>0800-222-72583 (SALUD)</p>
-    <button><a href="#">Sitio web</a></button>
+    <a href="#" class="button">Sitio web</a>
   </div>
 
   <div class="footer-right">

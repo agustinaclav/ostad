@@ -1,4 +1,6 @@
-@charset "UTF-8";
+$primary-color: #2E70CE;
+$font: "Noto Sans", sans-serif;
+
 * {
   margin: 0;
   padding: 0;
@@ -32,7 +34,7 @@ nav ul {
 .menu-inicio ul li a {
   color: white;
   text-decoration: none;
-  font-family: "Noto Sans", sans-serif;
+  font-family: $font;
   white-space: nowrap;
   font-weight: 600;
   font-size: 1rem;
@@ -124,7 +126,6 @@ nav ul {
 .tramite-inicio {
   text-align: center;
 }
-
 .tramite-inicio h3 {
   color: #1D2366;
   font-family: "Noto Sans", sans-serif;
@@ -203,12 +204,11 @@ button a {
 .tramite-boton {
   text-align: center;
 }
-
 /* --------- FOOTER --------- */
 footer {
   position: relative;
   background-color: #2E70CE;
-  background-image: url("./img/footerfondo.png");
+  background-image: url('./img/footerfondo.png');
   background-size: 600px;
   background-repeat: repeat;
   background-position: center;
@@ -221,12 +221,9 @@ footer {
 }
 
 footer::before {
-  content: "";
+  content: '';
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  top: 0; left: 0; right: 0; bottom: 0;
   background-color: rgba(46, 112, 206, 0);
   z-index: 0;
 }
@@ -325,6 +322,7 @@ p.telefonos {
 }
 
 /* --------- DISCAPACIDAD --------- */
+
 .portada-discapacidad,
 .planes-portada {
   display: flex;
@@ -353,48 +351,47 @@ p.telefonos {
   height: auto;
 }
 
-.titulo-discapacidad h2 {
-  display: flex;
-  justify-content: center;
-  color: #2E70CE;
-  align-items: center;
-  height: auto;
+.titulo-discapacidad h2{
+    display: flex;
+    justify-content: center;
+    color: $primary-color;
+    align-items: center;
+    height: auto;
 }
 
 .documentacion {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 20px;
-  padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    padding: 20px;
 }
 
 .recuadro-gral h3,
 .recuadro-prestador h3,
 .recuadro-transporte h3 {
-  color: black;
-  padding: 15px;
+    color: black;
+    padding: 15px;
 }
 
 .recuadro-gral ul,
 .recuadro-prestador ul,
 .recuadro-transporte ul {
-  color: #2E70CE;
-  padding: 5px;
-  font-family: "Noto Sans", sans-serif;
+    color: $primary-color;
+    padding: 5px;
+    font-family: $font;
 }
-
 .recuadro-gral,
 .recuadro-prestador,
 .recuadro-transporte {
-  border: 2px;
-  background-color: #cfe0f3;
-  text-align: center;
-  padding: 20px;
-  padding-left: 1px;
-  padding-right: 1px;
+    border: 2px;
+    background-color: #cfe0f3;
+    text-align: center;
+    padding: 20px;
+    padding-left: 1px;
+    padding-right: 1px;
 }
 
-.que-hacer {
+.que-hacer{
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 20px;
@@ -402,13 +399,14 @@ p.telefonos {
 }
 
 .disca-tramite {
-  max-width: 100px;
-  height: auto;
-  margin: 10px 0;
+    max-width: 100px;
+    height: auto;
+    margin: 10px 0;
 }
 
+
 .texto-dis {
-  flex: 1;
+  flex: 1;               
 }
 
 .contacto-discapacidad {
@@ -428,7 +426,6 @@ p.telefonos {
   max-width: 1000px;
   margin: 0 auto;
 }
-
 .foto-formulario {
   height: auto;
   width: 100px;
@@ -446,6 +443,7 @@ p.telefonos {
 }
 
 /* --------- CONTACTO --------- */
+
 .seccion-contacto {
   background-color: #2E70CE;
   text-align: right;
@@ -479,7 +477,7 @@ p.telefonos {
 }
 
 form {
-  height: auto;
+  height: auto; 
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -498,11 +496,11 @@ label {
   font-size: 16px;
 }
 
-input[type=text],
-input[type=tel],
-input[type=email],
+input[type="text"],
+input[type="tel"],
+input[type="email"],
 textarea {
-  background-color: #d8ecf8;
+  background-color: #d8ecf8;  
   border: 1px solid #8ab6d6;
   border-radius: 8px;
   padding: 10px;
@@ -514,8 +512,8 @@ textarea {
   min-height: 100px;
 }
 
-input[type=submit] {
-  background-color: #2E70CE;
+input[type="submit"] {
+  background-color: #2E70CE; 
   color: white;
   border: none;
   border-radius: 8px;
@@ -525,11 +523,11 @@ input[type=submit] {
   transition: background-color 0.3s ease;
 }
 
-input[type=submit]:hover {
+input[type="submit"]:hover {
   background-color: #1e5ab0;
 }
 
-input[type=reset] {
+input[type="reset"] {
   background-color: #ccc;
   color: black;
   border: none;
@@ -540,6 +538,7 @@ input[type=reset] {
 }
 
 /* --------- PLANES --------- */
+
 .imagen-planes {
   flex: 1 1 300px;
   display: flex;
@@ -597,98 +596,118 @@ input[type=reset] {
   background-color: #1c4c99;
 }
 
+
 /* --------- RESPONSIVE --------- */
 @media (max-width: 992px) {
   nav ul {
     gap: 3rem;
   }
+  
   h1 {
     font-size: 48px;
   }
+  
   h2 {
     font-size: 3rem;
   }
 }
+
 @media (max-width: 768px) {
-  header.Inicio {
+    header.Inicio {
     padding: 0 10px;
   }
+  
   .logo {
     width: 40px;
   }
+  
   nav ul {
     gap: 1.5rem;
     justify-content: flex-start;
   }
+
   .inicio-flex {
     flex-direction: column;
     align-items: center;
     gap: 15px;
   }
+
   .portada-inicio,
   .portada-tramites {
     flex-direction: column;
     text-align: center;
   }
+
   .portada-imagen,
   .tramite-imagen {
     justify-content: center;
   }
+
   .seccion {
     flex-direction: column;
     text-align: center;
   }
+
   .footer-container {
     flex-direction: column;
     text-align: center;
   }
+
   .footer-left a {
     width: 100%;
     padding: 12px 0;
   }
+
   .map-container iframe {
     height: 250px;
   }
 }
+
 @media (max-width: 576px) {
   h1 {
     font-size: 36px;
   }
+
   h2 {
     font-size: 2rem;
   }
+
   .pregunta-tramite {
     padding: 50px 15px;
   }
+
   button,
   .footer-left a {
     padding: 10px;
     font-size: 0.9rem;
   }
+
   .map-container iframe {
     height: 200px;
   }
 }
+
 @media (max-width: 480px) {
   header.Inicio {
     flex-direction: column;
     height: auto;
     padding: 10px 10px;
   }
+  
   nav {
     width: 100%;
     overflow-x: visible;
     margin-top: 10px;
   }
+  
   nav ul {
     flex-direction: column;
     gap: 10px;
     justify-content: center;
     min-width: 0;
   }
+  
   .menu-inicio ul li a {
     font-size: 1.1rem;
   }
 }
-
-/*# sourceMappingURL=style.css.map */
