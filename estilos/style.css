@@ -755,5 +755,71 @@ section {
     margin: 0 auto;
   }
 }
+#menu-toggle {
+  display: none;
+}
+
+/* Estilos botón hamburguesa */
+.menu-icon {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  width: 25px;
+  height: 20px;
+  justify-content: space-between;
+  margin-left: 15px;
+}
+
+.menu-icon span {
+  display: block;
+  height: 3px;
+  background-color: white;
+  border-radius: 2px;
+}
+
+.menu-inicio ul {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .menu-icon {
+    display: flex;
+  }
+  .menu-inicio {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    background: white;
+    display: none;
+    padding: 10px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  .menu-inicio ul {
+    flex-direction: column;
+    gap: 10px;
+    padding-left: 0;
+    margin: 0;
+  }
+  .menu-inicio ul li a {
+    color: #2e70ce;
+    padding: 8px 16px;
+    display: block;
+  }
+  #menu-toggle:checked ~ .menu-inicio {
+    display: block;
+  }
+  .telefonos {
+    display: none;
+  }
+  .inicio-flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
 
 /*# sourceMappingURL=style.css.map */
