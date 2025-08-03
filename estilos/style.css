@@ -721,4 +721,39 @@ section {
   padding: 1rem;
 }
 
+@media (max-width: 767px) {
+  .portada-discapacidad,
+  .portada-tramites {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .discapacidad-texto,
+  .tramites-texto {
+    flex: 1 1 100%;
+    min-width: auto;
+  }
+  .discapacidad-imagen,
+  .tramite-imagen {
+    justify-content: center;
+    width: 100%;
+  }
+  .discapacidad-imagen img,
+  .tramite-imagen img {
+    max-width: 100%;
+    height: auto;
+  }
+  .portada-texto h1,
+  .portada-texto h2,
+  .tramites-texto h1,
+  .tramites-texto h2 {
+    font-size: 2rem;
+  }
+  .medico,
+  .imagen-tramite {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+}
+
 /*# sourceMappingURL=style.css.map */
